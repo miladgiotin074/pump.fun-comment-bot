@@ -2,11 +2,11 @@
 // Author: Gifted1x
 // Date: 2024-04-22
 
-import chalk from "chalk";
-import comments from "./comments.json" assert { type: "json" };
-import axios from "axios";
+const chalk = require("chalk");
+const comments = require("./comments.json");
+const axios = require("axios");
 
-import { createWallets, signTransaction } from "./utils";
+const { createWallets, signTransaction } = require("./utils");
 
 const login = async (keypair) => {
     const signedMessage = signTransaction(keypair.secretKeyBase58);
